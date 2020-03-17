@@ -7,9 +7,9 @@ USER root
 RUN apt-get update && apt-get install --assume-yes wget
 
 # Pre build commands
-RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/pre-build.sh
-RUN chmod 775 ./pre-build.sh
-RUN sh pre-build.sh
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/springboot/maven/2.x/pre-build-2.sh
+RUN chmod 775 ./pre-build-2.sh
+RUN sh pre-build-2.sh
 
 # Install Workspace for Java
 
