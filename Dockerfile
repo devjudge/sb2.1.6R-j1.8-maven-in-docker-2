@@ -11,6 +11,10 @@ RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/ba
 RUN chmod 775 ./pre-build-2.sh
 RUN sh pre-build-2.sh
 
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/database/db-setup.sh
+RUN chmod 775 ./db-setup.sh
+RUN sh db-setup.sh
+
 # Install Workspace for Java
 
 RUN if [ $workspace = "theia" ] ; then \
@@ -30,8 +34,7 @@ RUN if [ $workspace = "theia" ] ; then \
 	wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/theia/java/run.sh \
     && chmod 775 ./run.sh ; fi
 
-COPY pom.xml /tmp/
-COPY src /tmp/src/
+COPY . /tmp/
 WORKDIR /tmp/
 
 EXPOSE 8080
@@ -44,6 +47,6 @@ RUN sh build.sh
 # Add extra docker commands here (if any)...
 
 # Run the app
-RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/springboot/maven/2.x/run.sh
-RUN chmod 775 ./run.sh
-CMD sh run.sh
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/springboot/maven/2.x/run-2.sh
+RUN chmod 775 ./run-2.sh
+CMD sh run-2.sh
