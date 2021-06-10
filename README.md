@@ -15,3 +15,8 @@ PROJECT START STEPS:
             - java -jar ./target/spring-boot-in-docker.jar
 
     2. Go to http://localhost:8080/ in your browser to view it.
+    
+    CLOUD-IDE SETUP STEPS(follow the below steps in case you are using the Cloud IDE instead of your Local IDE):
+    1. Please run the below commands from the project root to setup MySQL and MongoDB in this workspace:
+        - chmod 0755 ./database-setup.sh
+        - sh ./database-setup.sh
