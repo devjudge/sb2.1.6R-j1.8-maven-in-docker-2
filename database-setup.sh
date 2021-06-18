@@ -1,8 +1,12 @@
+#!/bin/bash
 sudo apt-get update
 
 sudo apt-get install --assume-yes gnupg apt-utils gnupg2 curl gcc
 
 sudo apt-get update
+
+. "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install java 8.0.292-zulu
 
 sudo apt-get install --assume-yes mysql-server-8.0
 
