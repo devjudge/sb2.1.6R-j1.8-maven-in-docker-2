@@ -20,3 +20,6 @@ PROJECT START STEPS:
     1. Please run the below commands from the project root to setup MySQL and MongoDB in this workspace:
         - chmod 0755 ./database-setup.sh
         - bash ./database-setup.sh
+    2. In case you want to connect to MySQL or MongoDB, kindly use the following credentials in your application:
+        - username: root
+        - password: admin
