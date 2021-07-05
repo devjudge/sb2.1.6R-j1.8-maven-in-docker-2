@@ -17,9 +17,19 @@ PROJECT START STEPS:
     2. Go to http://localhost:8080/ in your browser to view it.
     
     CLOUD-IDE SETUP STEPS(follow the below steps in case you are using the Cloud IDE instead of your Local IDE):
-    1. Please run the below commands from the project root to setup MySQL and MongoDB in this workspace:
-        - chmod 0755 ./database-setup.sh
-        - bash ./database-setup.sh
-    2. In case you want to connect to MySQL or MongoDB, kindly use the following credentials in your application:
-        - username: root
-        - password: admin
+	1. Please run the below commands from the project root to setup MySQL and MongoDB in this workspace:
+		- chmod 0755 ./database-setup.sh
+		- sh ./database-setup.sh
+	2. In case you want to connect to MySQL or MongoDB, kindly use the following credentials in your application:
+		2.a. MySQL
+			- host: localhost
+			- port: 3306
+			- username: root
+			- password: admin
+			- database: db
+		2.b. MongoDB
+			- host: localhost
+			- port: 27017
+			- username: root
+			- password: admin
+			- database: db
