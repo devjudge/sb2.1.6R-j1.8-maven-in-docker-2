@@ -7,3 +7,7 @@ ports:
   - port: 8080
     onOpen: ignore
     visibility: public
+vscode:
+  extensions:
+    - vscjava.vscode-java-debug
+    - redhat.java
