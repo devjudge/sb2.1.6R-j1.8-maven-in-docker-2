@@ -7,7 +7,7 @@ tasks:
     command: java -jar ./target/spring-boot-in-docker.jar
 ports:
   - port: 8080
-    onOpen: ignore
+    onOpen: open-preview
     visibility: public
 vscode:
   extensions:
